@@ -6,8 +6,8 @@
     display: block
     position: relative
     @include roboto
-    background-color: $c-white
-    color: $c-grey-6
+    background-color: $white
+    color: $grey6
 
     //reset
     *, *::before, *::after
@@ -17,15 +17,20 @@
         margin: 0
         padding: 0
 
+    p
+        display: block
+
+    ul
+        list-style-type: none
+
+    ul li:before
+        display: none
+
     input, button, textarea, select
         font: inherit
 
     .hidden
         display: none!important
-
-    //alza styles reset
-    &.blank p
-            margin-top: 0
 
     //links
     a
@@ -37,3 +42,7 @@
         height: auto
         max-width: 100%
         aspect-ratio: attr(width), attr(height)
+
+    //alza styles reset
+#articlePage.blank p
+    margin-top: 0

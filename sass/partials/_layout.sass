@@ -1,0 +1,30 @@
+#brandPage
+    .m
+        &t24
+            margin-top: 24px
+
+        &Cnr
+            margin-left: auto
+            margin-right: auto
+        
+        &Or
+            margin-left: 32px
+            margin-right: 32px
+
+            &-reduced
+                margin-left: 15%
+                margin-right: 15%
+
+@media only screen and (max-width: 500px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .mOr-reduced
+            margin-left: 32px
+            margin-right: 32px
+
+@media only screen and (max-width: 400px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .mOr, .mOr-reduced
+            margin-left: 20px
+            margin-right: 20px

@@ -2,58 +2,59 @@
 @import ../sass/partials/colors
 @import ../sass/partials/type
 @import ../sass/partials/reset
-@import ../sass/partials/alza
+@import ../sass/partials/layout
 @import ../sass/partials/switcher
 @import ../sass/partials/revealer
-
-//preview - TO REMOVE
-body
-    background-color: $c-blue-light
 
 #brandPage
     @include roboto
     text-align: center
-    color: $c-usafa
-    padding-top: 48px
+    color: $grey6
+    // padding-top: 48px
 
     .bp
-        &-12col
-            padding: 0 32px
-
-        &-container
-            @include flexVert
-            gap: 72px
-
-        &-banner
-            @include flexOr
-            align-items: center
-
-        &-perex
-            p
-                margin-top: 48px
-                color: $c-grey-6
-        
-        &-zigzag
+        &Container
             @include flexVert
             gap: 48px
+
+        &Banner
+            position: relative
+            padding-top: 72px
+
+            &--container
+                @include flexOr
+
+            &--logo
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+
+        &Perex
+            h2
+                color: $green
+
+            p
+                color: $grey6
+        
+        &Cards
+            @include flexVert
+            gap: 32px
 
             &--unit
                 @include flexOr
                 justify-content: space-between
-                gap: 48px
+                gap: 32px
 
-                &:nth-child(1) .bp-zigzag--caption
-                    background-color: $c-usafa
+                &:nth-child(1) .bpCards--caption
+                    background-color: $green
 
-                &:nth-child(2) .bp-zigzag--caption
-                    background-color: $c-blush
-
-                &:nth-child(3) .bp-zigzag--caption
-                    background-color: $c-plum
+                &:nth-child(2) .bpCards--caption
+                    background-color: $usafa
                     
             &--caption
-                color:  $c-white
-                width: calc((100% - 48px) / 2)
+                color:  $white
+                width: calc((100% - 32px) / 2)
                 @include flexVert
                 justify-content: center
                 align-items: center
@@ -62,55 +63,29 @@ body
 
                 p
                     padding: 0 72px
+                    color: $white
 
+                h3
+                    color: $white
 
             &--image
-                width: calc((100% - 48px) / 2)
+                width: calc((100% - 32px) / 2)
                 border-radius: 4px
 
-        &-row
+        &Icons
             @include flexOr
             justify-content: space-between
             align-items: center
-            padding-left: 76px
+            gap: 48px
 
-            &--icons
-                margin-top: 48px
-                @include flexOr
-                justify-content: space-between
-
-            &--unit
-                @include flexVert
-                align-items: center
-                width: 92px
-
-                h4
-                    margin-top: 32px
-
-            &--image
-                margin-bottom: -50px
-
-            .text__normal
-                font-weight: 500
-
-        &-foil
-            background-image: url("https://i.alza.cz/Foto/or/bp/durex/2022-05/img/foil.png")
-            background-size: cover
-            background-position: center
-
-            h3
-                color: $c-white
-                margin: 8% 15px 32% 15px
-
-        &-column
-            @include flexOr
-            justify-content: space-between
-            align-items: center
+            &--icon
+                width: 64px
+                height: 64px
+                flex-shrink: 0
 
             &--icons
                 @include flexVert
                 gap: 32px
-                margin-left: 24px
 
             &--unit
                 @include flexOr
@@ -121,33 +96,36 @@ body
                     text-align: left
 
                     h4
-                        margin-bottom: 8px
+                        color: $green
 
             &--image
-                margin-bottom: -50px
+                margin: 16px
 
-        &-video
+        &Video
             @include flexVert
-            gap: 48px
+            gap: 32px
 
             &--unit
                 @include flexOr
-                gap: 48px
+                gap: 32px
 
-                &:nth-child(1) .bp-video--caption
-                    background-color: $c-blush
+                &:nth-child(1) .bpVideo--caption
+                    background-color: $green
 
-                &:nth-child(2) .bp-video--caption
-                    background-color: $c-laurel
+                &:nth-child(2) .bpVideo--caption
+                    background-color: $usafa
 
             &--caption
-                color:  $c-white
+                color:  $white
                 flex-basis: 35%
                 @include flexVert
                 justify-content: center
                 align-items: center
-                gap: 48px
                 border-radius: 4px
+                padding: 48px
+
+                h3.bpVideo--title
+                    color: $white
                 
                 span
                     display: block
@@ -170,7 +148,63 @@ body
                         width: 100%
                         height: 100%
 
-        &-footer
+        &Faq
+            h3
+                color: $green
+
+            &--units
+                @include flexVert
+                gap: 16px
+
+            &--box 
+                background-color: $green
+                border-radius: 4px
+                padding: 16px
+                cursor: pointer
+                transition: background-color 500ms
+
+                &:hover
+                    background-color: darken($green, 6%)
+
+                &--handle 
+                    @include flexOr
+                    justify-content: space-between
+                    gap: 16px
+
+                    h4
+                        text-align: left
+                        color: $white
+                        font-weight: 400              
+
+                &--content 
+                    max-height: 0
+                    overflow: hidden
+                    will-change: max-height
+                    transition: opacity 500ms, max-height 500ms, padding 500ms
+                    opacity: 0
+
+                    p
+                        margin-top: 0
+                        text-align: left
+                        color: $white
+
+                
+                &__active 
+                    .bpFaq--box--content 
+                        padding: 16px 0 24px 0
+                        opacity: 1
+
+                    .bpFaq--box--icon
+                        transform: rotate(45deg)
+
+                &--icon
+                    width: 20px
+                    min-width: 20px
+                    height: 20px
+                    transform: rotate(0deg)
+                    transition: transform 500ms
+
+        &Footer
             @include flexVert
             gap: 48px
 
@@ -182,10 +216,16 @@ body
                 flex: 1 1 0
                 @include flexVert
                 align-items: center
-                gap: 32px
+                gap: 24px
 
-            .text__normal
-                font-weight: 500
+            h3, h4
+                color: $green
+
+        &Button
+            background-color: $white
+            color: $grey6
+            @include btnAppearance
+            @include btnStates($white)
 
 // layout 0
 .layout-0 #brandPage,
@@ -193,93 +233,72 @@ body
         &-container
             gap: 48px
 
-        &-banner img
-            max-width: 39.5%
+        &Banner
+            img
+                max-width: 50%
         
-        &-perex p
+        &Perex p
             margin-top: 24px
 
-        &-zigzag--caption p
+            span
+                display: block
+
+        &Cards
+            &--caption
+                gap: 24px
+            p
                 padding: 0 32px
 
-        &-row--unit img
-            width: 48px
-
-        &-column
+        &Icons
             padding-left: 0
+            
+            img
+                margin: 0
+                max-width: 39.25%
 
-        &-video iframe
+        &Video iframe
             height: 256px
 
 @media only screen and (max-width: 809px)
     .mobile #brandPage,
     .mobileapp #brandPage
         .bp
-            &-12col
-                padding: 0 16px
-
             &-container
                 gap: 48px
 
-            &-banner
-                @include flexVert
-                gap: 32px
+            &Banner
+                img
+                    max-width: 50%
+            
+            &Perex p
+                margin-top: 24px
 
-            &-zigzag
-                gap: 16px
-
-                &--unit
-                    gap: 16px
-
+            &Cards
                 &--caption
-                    width: calc((100% - 16px) / 2)
                     gap: 24px
 
-                    p
-                        padding: 0 32px
+                p
+                    padding: 0 32px
 
-                &--image
-                    width: calc((100% - 16px) / 2)
+            &Icons
+                padding-left: 0
+                
+                img
+                    margin: 0
+                    max-width: 39.25%
 
-            &-row
-                flex-direction: column-reverse
-                padding-left: 16px
-                padding-right: 16px
+            &Video
+                &--caption
+                    padding: 16px
 
-                &--image
-                    width: 50%
-                    padding: 0 0 32px 8%
-                    margin-bottom: -24px
-
-                &--icons
-                    flex-wrap: wrap
-                    justify-content: center
-                    gap: 32px
-
-                &--unit
-                    width: calc((100% - 32px * (3 - 1)) / 3)
-
-                    p
-                        margin: 0 15px
-
-            &-column
-                flex-direction: column
-
-                &--image
-                    width: 50%
-                    margin-bottom: 16px
-
-            &-video
-                gap: 16px
-
-                &--unit
-                    gap: 16px
+                h3
+                    @include type(16, 1.25, 700)
 
 @media only screen and (max-width: 630px)
     .mobile #brandPage,
     .mobileapp #brandPage
         .bp
-            &-zigzag
+            &Cards
                 &--unit
                     flex-direction: column
 
@@ -292,36 +311,29 @@ body
                     height: 0
                     padding-bottom: 100%
 
-                    h2
+                    h3
                         margin-top: 100%
 
                 &--image
                     width: 100%
 
-            &-foil h3
-                margin-bottom: 42%
-                @include type(16px, 1.25, 500)      
+            &Icons
+                flex-direction: column
 
-            &-video
-                gap: 48px 
+                img
+                    max-width: 100%
+
+            &Video
+                gap: 16px
 
                 &--unit
+                    gap: 16px
                     flex-direction: column
 
-                    &:nth-child(1) .bp-video--caption
-                        color: $c-blush
-                        background-color: unset
-
-                    &:nth-child(2) .bp-video--caption
-                        color: $c-laurel
-                        background-color: unset
+                    &:nth-child(2) .bpVideo--caption
                         order: -1
 
-                &--caption span
-                    display: inline-block
-                    margin-left: 6px
-
-            &-footer
+            &Footer
                 gap: 32px
 
                 &--icons
@@ -330,17 +342,34 @@ body
 
                 &--unit
                     gap: 16px
-                        
-@media only screen and (max-width: 350px)
+
+@media only screen and (max-width: 550px)
     .mobile #brandPage,
     .mobileapp #brandPage
         .bp
-            &-row
-                &--unit
-                    img
-                        width: 48px
+            &Banner
+                padding-top: unset
 
-            &-column
+                &--container
+                    flex-direction: column
+
+                img
+                    max-width: 100%
+
+                    &:first-of-type
+                        order: 1
+
+                &--logo
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 30%
+                    min-width: 92px
+
+@media only screen and (max-width: 400px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp
+            &Icons
                 &--icons
                     margin-left: 0
                     margin-top: 32px
@@ -349,7 +378,9 @@ body
                     flex-direction: column
                     gap: 16px
 
-                    p, h4
+                    &--caption
                         text-align: center
 
+                        p, h4
+                            text-align: center
             

@@ -9,28 +9,40 @@
 
 @mixin btnStates($color)
     &:hover
-        background-color: darken($color, 6%)
-        box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3)
+        background-color: darken($color, 3%)
+        
     &:active
         background-color: darken($color, 12%)
         box-shadow: none
-    &__disabled
-        background-color: transparentize($color, .5)
-        box-shadow: none
 
-@mixin btnAppearance($height, $size)
+@mixin pad($top, $right, $bottom, $left)
+    padding-top: $top + px
+    padding-right: $right + px
+    padding-bottom: $bottom + px
+    padding-left: $left + px
+
+@mixin mar($top, $right, $bottom, $left)
+    margin-top: $top + px
+    margin-right: $right + px
+    margin-bottom: $bottom + px
+    margin-left: $left + px
+
+@mixin btnAppearance
     border-radius: 4px
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15)
-    height: $height + px
-    line-height: $height + px
-    font-size: $size + px
+    width: 160px
+    padding: 8px 0
     text-align: center
     text-decoration: none
+    font-size: 14px
     font-weight: 500
-    display: inline-block
+    display: block
     border: none
     transition: all 300ms ease-in-out
     cursor: pointer
+    @media only screen and (max-width: 400px)
+        padding: 4px 0
+        font-size: 12px
 
 @mixin grad($direction, $color)
     background: linear-gradient($direction, $color 0%, lighten($color, 12%) 100%)
@@ -39,8 +51,8 @@
     font-family: 'Roboto', sans-serif
 
 @mixin type($size, $level, $weight)
-    font-size: $size
-    line-height: $size * $level
+    font-size: $size + px
+    line-height: $size * $level + px
     font-weight: $weight
 
 @mixin imgRetina($image, $type)

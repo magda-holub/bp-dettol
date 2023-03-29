@@ -1,19 +1,16 @@
 #brandPage
-    .bp-revealer
-        background-color: $c-grey-1
-        color: $c-grey-6
-        @include btnStates($c-grey-1)
-        @include btnAppearance(32, 14)
-        padding: 0
-        width: 120px
+    .bpToggle
+        background-color: $grey1
+        color: $grey6
+        @include btnAppearance
+        @include btnStates($grey1)
 
         &--container
             padding-bottom: 48px
             margin: auto
-            width: 120px
 
-    .bp-toggle-content
+    .bpToggle--content
         display: none
 
-    .bp-toggle-content.is-visible 
+    .bpToggle--content.is-visible 
         display: block
