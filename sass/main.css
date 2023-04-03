@@ -3,25 +3,21 @@
   line-height: 30px;
   font-weight: 700;
 }
-
 #brandPage h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
-
 #brandPage h4 {
   font-size: 18px;
   line-height: 22.5px;
   font-weight: 700;
 }
-
 #brandPage p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
-
 #brandPage p.text__small {
   font-size: 14px;
   line-height: 21px;
@@ -33,25 +29,21 @@
   line-height: 30px;
   font-weight: 700;
 }
-
 .layout-0 #brandPage h3 {
   font-size: 20px;
   line-height: 25px;
   font-weight: 700;
 }
-
 .layout-0 #brandPage h4 {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
 }
-
 .layout-0 #brandPage p {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-
 .layout-0 #brandPage p.text__small {
   font-size: 12px;
   line-height: 18px;
@@ -59,8 +51,8 @@
 }
 
 @media only screen and (max-width: 809px) {
-  .mobile #brandPage,
-  .mobileapp #brandPage {
+  .mobile #brandPage h2,
+  .mobileapp #brandPage h2 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
@@ -90,7 +82,6 @@
     font-weight: 400;
   }
 }
-
 @media only screen and (max-width: 400px) {
   .mobile #brandPage h2,
   .mobileapp #brandPage h2 {
@@ -117,7 +108,6 @@
     font-weight: 400;
   }
 }
-
 .category-description {
   padding: 0 !important;
 }
@@ -125,46 +115,35 @@
 #brandPage {
   display: block;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   color: #212121;
 }
-
 #brandPage *, #brandPage *::before, #brandPage *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 #brandPage h1, #brandPage h2, #brandPage h3, #brandPage h4, #brandPage p, #brandPage ul, #brandPage ol, #brandPage li, #brandPage figure {
   margin: 0;
   padding: 0;
 }
-
 #brandPage p {
   display: block;
 }
-
 #brandPage ul {
   list-style-type: none;
 }
-
 #brandPage ul li:before {
   display: none;
 }
-
 #brandPage input, #brandPage button, #brandPage textarea, #brandPage select {
   font: inherit;
 }
-
 #brandPage .hidden {
   display: none !important;
 }
-
 #brandPage a {
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
 #brandPage img {
   display: block;
   height: auto;
@@ -179,17 +158,14 @@
 #brandPage .mt24 {
   margin-top: 24px;
 }
-
 #brandPage .mCnr {
   margin-left: auto;
   margin-right: auto;
 }
-
 #brandPage .mOr {
   margin-left: 32px;
   margin-right: 32px;
 }
-
 #brandPage .mOr-reduced {
   margin-left: 15%;
   margin-right: 15%;
@@ -202,7 +178,6 @@
     margin-right: 32px;
   }
 }
-
 @media only screen and (max-width: 400px) {
   .mobile #brandPage .mOr, .mobile #brandPage .mOr-reduced,
   .mobileapp #brandPage .mOr,
@@ -211,14 +186,12 @@
     margin-right: 20px;
   }
 }
-
 #layout_switch {
   position: fixed;
   left: 20px;
   top: 20px;
   z-index: 100;
 }
-
 #layout_switch button {
   display: block;
   color: #fff;
@@ -228,8 +201,7 @@
   height: 24px;
   border-radius: 100%;
   margin-bottom: 5px;
-  -webkit-box-shadow: 0px 4px 10px 0px #44034455;
-          box-shadow: 0px 4px 10px 0px #44034455;
+  box-shadow: 0px 4px 10px 0px rgba(68, 3, 68, 0.3333333333);
   cursor: pointer;
   border: none;
 }
@@ -242,8 +214,7 @@
   background: #FFFFFF;
   font-size: 16px;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -255,7 +226,8 @@
   width: 809px;
 }
 
-.mobile #brandPage .flex-container {
+.mobile #brandPage,
+.flex-container {
   max-width: 100%;
 }
 
@@ -263,8 +235,7 @@
   background-color: #f4f5f5;
   color: #212121;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   width: 160px;
   padding: 8px 0;
   text-align: center;
@@ -273,296 +244,177 @@
   font-weight: 500;
   display: block;
   border: none;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 400px) {
   #brandPage .bpToggle {
     padding: 4px 0;
     font-size: 12px;
   }
 }
-
 #brandPage .bpToggle:hover {
   background-color: #eceeee;
 }
-
 #brandPage .bpToggle:active {
   background-color: #d4d8d8;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 #brandPage .bpToggle--container {
   padding-bottom: 48px;
   margin: auto;
 }
-
 #brandPage .bpToggle--content {
   display: none;
 }
-
 #brandPage .bpToggle--content.is-visible {
   display: block;
 }
 
 #brandPage {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   color: #212121;
 }
-
 #brandPage .bpContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 48px;
 }
-
 #brandPage .bpBanner {
   position: relative;
   padding-top: 72px;
 }
-
 #brandPage .bpBanner--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-
 #brandPage .bpBanner--logo {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 #brandPage .bpPerex h2 {
   color: #008522;
 }
-
 #brandPage .bpPerex p {
   color: #212121;
 }
-
 #brandPage .bpCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 32px;
 }
-
 #brandPage .bpCards--unit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 32px;
 }
-
 #brandPage .bpCards--unit:nth-child(1) .bpCards--caption {
   background-color: #008522;
 }
-
 #brandPage .bpCards--unit:nth-child(2) .bpCards--caption {
   background-color: #0B50A2;
 }
-
 #brandPage .bpCards--caption {
   color: #ffffff;
   width: calc((100% - 32px) / 2);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 48px;
   border-radius: 4px;
 }
-
 #brandPage .bpCards--caption p {
   padding: 0 72px;
   color: #ffffff;
 }
-
 #brandPage .bpCards--caption h3 {
   color: #ffffff;
 }
-
 #brandPage .bpCards--image {
   width: calc((100% - 32px) / 2);
   border-radius: 4px;
 }
-
 #brandPage .bpIcons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   gap: 48px;
 }
-
 #brandPage .bpIcons--icon {
   width: 64px;
   height: 64px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
-
 #brandPage .bpIcons--icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 32px;
 }
-
 #brandPage .bpIcons--unit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
   gap: 48px;
 }
-
 #brandPage .bpIcons--unit--caption {
   text-align: left;
 }
-
 #brandPage .bpIcons--unit--caption h4 {
   color: #008522;
 }
-
 #brandPage .bpIcons--image {
   margin: 16px;
 }
-
 #brandPage .bpVideo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 32px;
 }
-
 #brandPage .bpVideo--unit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 32px;
 }
-
 #brandPage .bpVideo--unit:nth-child(1) .bpVideo--caption {
   background-color: #008522;
 }
-
 #brandPage .bpVideo--unit:nth-child(2) .bpVideo--caption {
   background-color: #0B50A2;
 }
-
 #brandPage .bpVideo--caption {
   color: #ffffff;
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-basis: 35%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   padding: 48px;
 }
-
 #brandPage .bpVideo--caption h3.bpVideo--title {
   color: #ffffff;
 }
-
 #brandPage .bpVideo--caption span {
   display: block;
 }
-
 #brandPage .bpVideo--container {
-  -ms-flex-preferred-size: 65%;
-      flex-basis: 65%;
+  flex-basis: 65%;
 }
-
 #brandPage .bpVideo--container div {
   position: relative;
   padding-bottom: 56.25%;
 }
-
 #brandPage .bpVideo--container div iframe {
   border-radius: 4px;
   position: absolute;
@@ -574,145 +426,88 @@
   width: 100%;
   height: 100%;
 }
-
 #brandPage .bpFaq h3 {
   color: #008522;
 }
-
 #brandPage .bpFaq--units {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 16px;
 }
-
 #brandPage .bpFaq--box {
   background-color: #008522;
   border-radius: 4px;
   padding: 16px;
   cursor: pointer;
-  -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
 }
-
 #brandPage .bpFaq--box:hover {
   background-color: #00661a;
 }
-
 #brandPage .bpFaq--box--handle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 16px;
 }
-
 #brandPage .bpFaq--box--handle h4 {
   text-align: left;
   color: #ffffff;
   font-weight: 400;
 }
-
 #brandPage .bpFaq--box--content {
   max-height: 0;
   overflow: hidden;
   will-change: max-height;
-  -webkit-transition: opacity 500ms, max-height 500ms, padding 500ms;
   transition: opacity 500ms, max-height 500ms, padding 500ms;
   opacity: 0;
 }
-
 #brandPage .bpFaq--box--content p {
   margin-top: 0;
   text-align: left;
   color: #ffffff;
 }
-
 #brandPage .bpFaq--box__active .bpFaq--box--content {
   padding: 16px 0 24px 0;
   opacity: 1;
 }
-
 #brandPage .bpFaq--box__active .bpFaq--box--icon {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 #brandPage .bpFaq--box--icon {
   width: 20px;
   min-width: 20px;
   height: 20px;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
+  transform: rotate(0deg);
   transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
 }
-
 #brandPage .bpFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 48px;
 }
-
 #brandPage .bpFooter--icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 48px;
 }
-
 #brandPage .bpFooter--unit {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1 1 0;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 24px;
 }
-
 #brandPage .bpFooter h3, #brandPage .bpFooter h4 {
   color: #008522;
 }
-
 #brandPage .bpButton {
   background-color: #ffffff;
   color: #212121;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   width: 160px;
   padding: 8px 0;
   text-align: center;
@@ -721,62 +516,58 @@
   font-weight: 500;
   display: block;
   border: none;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 400px) {
   #brandPage .bpButton {
     padding: 4px 0;
     font-size: 12px;
   }
 }
-
 #brandPage .bpButton:hover {
   background-color: #f7f7f7;
 }
-
 #brandPage .bpButton:active {
   background-color: #e0e0e0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
-.layout-0 #brandPage .bp-container {
+.layout-0 #brandPage-container,
+.bp-container {
   gap: 48px;
 }
-
-.layout-0 #brandPage .bpBanner img {
+.layout-0 #brandPageBanner img,
+.bpBanner img {
   max-width: 50%;
 }
-
-.layout-0 #brandPage .bpPerex p {
+.layout-0 #brandPagePerex p,
+.bpPerex p {
   margin-top: 24px;
 }
-
-.layout-0 #brandPage .bpPerex p span {
+.layout-0 #brandPagePerex p span,
+.bpPerex p span {
   display: block;
 }
-
-.layout-0 #brandPage .bpCards--caption {
+.layout-0 #brandPageCards--caption,
+.bpCards--caption {
   gap: 24px;
 }
-
-.layout-0 #brandPage .bpCards p {
+.layout-0 #brandPageCards p,
+.bpCards p {
   padding: 0 32px;
 }
-
-.layout-0 #brandPage .bpIcons {
+.layout-0 #brandPageIcons,
+.bpIcons {
   padding-left: 0;
 }
-
-.layout-0 #brandPage .bpIcons img {
+.layout-0 #brandPageIcons img,
+.bpIcons img {
   margin: 0;
   max-width: 39.25%;
 }
-
-.layout-0 #brandPage .bpVideo iframe {
+.layout-0 #brandPageVideo iframe,
+.bpVideo iframe {
   height: 256px;
 }
 
@@ -821,20 +612,14 @@
     font-weight: 700;
   }
 }
-
 @media only screen and (max-width: 630px) {
   .mobile #brandPage .bpCards--unit,
   .mobileapp #brandPage .bpCards--unit {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .mobile #brandPage .bpCards--unit:nth-of-type(2) img,
   .mobileapp #brandPage .bpCards--unit:nth-of-type(2) img {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   .mobile #brandPage .bpCards--caption,
   .mobileapp #brandPage .bpCards--caption {
@@ -853,10 +638,7 @@
   }
   .mobile #brandPage .bpIcons,
   .mobileapp #brandPage .bpIcons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .mobile #brandPage .bpIcons img,
   .mobileapp #brandPage .bpIcons img {
@@ -869,16 +651,11 @@
   .mobile #brandPage .bpVideo--unit,
   .mobileapp #brandPage .bpVideo--unit {
     gap: 16px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .mobile #brandPage .bpVideo--unit:nth-child(2) .bpVideo--caption,
   .mobileapp #brandPage .bpVideo--unit:nth-child(2) .bpVideo--caption {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
   .mobile #brandPage .bpFooter,
   .mobileapp #brandPage .bpFooter {
@@ -886,10 +663,7 @@
   }
   .mobile #brandPage .bpFooter--icons,
   .mobileapp #brandPage .bpFooter--icons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 32px;
   }
   .mobile #brandPage .bpFooter--unit,
@@ -897,7 +671,6 @@
     gap: 16px;
   }
 }
-
 @media only screen and (max-width: 550px) {
   .mobile #brandPage .bpBanner,
   .mobileapp #brandPage .bpBanner {
@@ -905,10 +678,7 @@
   }
   .mobile #brandPage .bpBanner--container,
   .mobileapp #brandPage .bpBanner--container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .mobile #brandPage .bpBanner img,
   .mobileapp #brandPage .bpBanner img {
@@ -916,20 +686,16 @@
   }
   .mobile #brandPage .bpBanner img:first-of-type,
   .mobileapp #brandPage .bpBanner img:first-of-type {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   .mobile #brandPage .bpBanner--logo,
   .mobileapp #brandPage .bpBanner--logo {
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 30%;
     min-width: 92px;
   }
 }
-
 @media only screen and (max-width: 400px) {
   .mobile #brandPage .bpIcons--icons,
   .mobileapp #brandPage .bpIcons--icons {
@@ -938,10 +704,7 @@
   }
   .mobile #brandPage .bpIcons--unit,
   .mobileapp #brandPage .bpIcons--unit {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 16px;
   }
   .mobile #brandPage .bpIcons--unit--caption,
