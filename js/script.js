@@ -1,8 +1,8 @@
 //revealer
 function revealer() {
-    let button = document.getElementById('bpToggle')
+    var button = document.getElementById('bpToggle')
 
-    let toggle = function (element) {
+    var toggle = function (element) {
         element.classList.toggle('is-visible');
     };
 
@@ -10,7 +10,7 @@ function revealer() {
         if (!event.target.classList.contains('toggle')) return;
         event.preventDefault();
 
-        let content = document.querySelector(event.target.hash);
+        var content = document.querySelector(event.target.hash);
         if (!content) return;
 
         toggle(content);
@@ -18,10 +18,10 @@ function revealer() {
     }, false);
 
     button.addEventListener('click', function handleClick(){
-        let initialText = document.getElementById('bpToggle--text__collapsed').textContent;
+        var initialText = document.getElementById('bpToggle__text--collapsed').textContent;
 
         if (button.textContent.toLocaleLowerCase().includes(initialText.toLowerCase())) {
-            button.textContent = document.getElementById('bpToggle--text__expanded').textContent;
+            button.textContent = document.getElementById('bpToggle__text--expanded').textContent;
         } else {
             button.textContent = initialText;
         }
@@ -30,23 +30,23 @@ function revealer() {
 
 //dropdown
 function dropDown() {
-    let boxes = document.querySelectorAll(".bpFaq--box");
+    var boxes = document.querySelectorAll(".bpFaq__box");
 
-    let openbox = (box) => {
-        let content = box.querySelector(".bpFaq--box--content");
-        box.classList.add("bpFaq--box__active");
+    var openbox = (box) => {
+        var content = box.querySelector(".bpFaq__box__content");
+        box.classList.add("bpFaq__box--active");
         content.style.maxHeight = content.scrollHeight + 24 + "px";
     };
 
-    let closebox = (box) => {
-        let content = box.querySelector(".bpFaq--box--content");
-        box.classList.remove("bpFaq--box__active");
+    var closebox = (box) => {
+        var content = box.querySelector(".bpFaq__box__content");
+        box.classList.remove("bpFaq__box--active");
         content.style.maxHeight = null;
     };
 
     boxes.forEach((box) => {
-        let handle = box.querySelector(".bpFaq--box--handle");
-        let content = box.querySelector(".bpFaq--box--content");
+        var handle = box.querySelector(".bpFaq__box__handle");
+        var content = box.querySelector(".bpFaq__box__content");
 
         handle.onclick = () => {
             if (content.style.maxHeight) {
@@ -59,6 +59,3 @@ function dropDown() {
     });
 
 }; dropDown();
-
-//h1
-$("#h1cc").insertAfter("#categoryUpperDescription")
