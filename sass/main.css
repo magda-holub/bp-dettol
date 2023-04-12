@@ -18,7 +18,7 @@
   line-height: 24px;
   font-weight: 400;
 }
-#brandPage p.text__small {
+#brandPage p.text--small {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -44,7 +44,7 @@
   line-height: 21px;
   font-weight: 400;
 }
-.layout-0 #brandPage p.text__small {
+.layout-0 #brandPage p.text--small {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -75,8 +75,8 @@
     line-height: 21px;
     font-weight: 400;
   }
-  .mobile #brandPage p.text__small,
-  .mobileapp #brandPage p.text__small {
+  .mobile #brandPage p.text--small,
+  .mobileapp #brandPage p.text--small {
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
@@ -187,23 +187,41 @@
   }
 }
 #layout_switch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 20px;
   top: 20px;
   z-index: 100;
+  width: 180px;
+  height: 70px;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
 }
 #layout_switch button {
-  display: block;
-  color: #fff;
-  background: #631B78;
-  font-size: 10px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  margin-bottom: 5px;
-  box-shadow: 0px 4px 10px 0px rgba(68, 3, 68, 0.3333333333);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
   cursor: pointer;
   border: none;
+}
+#layout_switch button .icon {
+  width: 30px;
+  height: 30px;
+  fill: #737373;
+}
+#layout_switch button.active {
+  box-shadow: inset 0px 2px 4px 0px rgba(128, 128, 128, 0.7);
 }
 
 #brandPage {
@@ -237,7 +255,7 @@
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   width: 160px;
-  padding: 8px 0;
+  padding: 12px 0;
   text-align: center;
   text-decoration: none;
   font-size: 14px;
@@ -249,7 +267,6 @@
 }
 @media only screen and (max-width: 400px) {
   #brandPage .bpToggle {
-    padding: 4px 0;
     font-size: 12px;
   }
 }
@@ -260,14 +277,14 @@
   background-color: #d4d8d8;
   box-shadow: none;
 }
-#brandPage .bpToggle--container {
+#brandPage .bpToggle__container {
   padding-bottom: 48px;
   margin: auto;
 }
-#brandPage .bpToggle--content {
+#brandPage .bpToggle__content {
   display: none;
 }
-#brandPage .bpToggle--content.is-visible {
+#brandPage .bpToggle__content.is-visible {
   display: block;
 }
 
@@ -285,12 +302,12 @@
   position: relative;
   padding-top: 72px;
 }
-#brandPage .bpBanner--container {
+#brandPage .bpBanner__container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-#brandPage .bpBanner--logo {
+#brandPage .bpBanner__logo {
   position: absolute;
   top: 0;
   left: 50%;
@@ -307,20 +324,20 @@
   flex-direction: column;
   gap: 32px;
 }
-#brandPage .bpCards--unit {
+#brandPage .bpCards__unit {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   gap: 32px;
 }
-#brandPage .bpCards--unit:nth-child(1) .bpCards--caption {
+#brandPage .bpCards__unit:nth-child(1) .bpCards__caption {
   background-color: #008522;
 }
-#brandPage .bpCards--unit:nth-child(2) .bpCards--caption {
+#brandPage .bpCards__unit:nth-child(2) .bpCards__caption {
   background-color: #0B50A2;
 }
-#brandPage .bpCards--caption {
+#brandPage .bpCards__caption {
   color: #ffffff;
   width: calc((100% - 32px) / 2);
   display: flex;
@@ -330,14 +347,14 @@
   gap: 48px;
   border-radius: 4px;
 }
-#brandPage .bpCards--caption p {
+#brandPage .bpCards__caption p {
   padding: 0 72px;
   color: #ffffff;
 }
-#brandPage .bpCards--caption h3 {
+#brandPage .bpCards__caption h3 {
   color: #ffffff;
 }
-#brandPage .bpCards--image {
+#brandPage .bpCards__image {
   width: calc((100% - 32px) / 2);
   border-radius: 4px;
 }
@@ -349,30 +366,30 @@
   align-items: center;
   gap: 48px;
 }
-#brandPage .bpIcons--icon {
+#brandPage .bpIcons__icon {
   width: 64px;
   height: 64px;
   flex-shrink: 0;
 }
-#brandPage .bpIcons--icons {
+#brandPage .bpIcons__icons {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-#brandPage .bpIcons--unit {
+#brandPage .bpIcons__unit {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   gap: 48px;
 }
-#brandPage .bpIcons--unit--caption {
+#brandPage .bpIcons__unit__caption {
   text-align: left;
 }
-#brandPage .bpIcons--unit--caption h4 {
+#brandPage .bpIcons__unit__caption h4 {
   color: #008522;
 }
-#brandPage .bpIcons--image {
+#brandPage .bpIcons__image {
   margin: 16px;
 }
 #brandPage .bpVideo {
@@ -380,19 +397,19 @@
   flex-direction: column;
   gap: 32px;
 }
-#brandPage .bpVideo--unit {
+#brandPage .bpVideo__unit {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 32px;
 }
-#brandPage .bpVideo--unit:nth-child(1) .bpVideo--caption {
+#brandPage .bpVideo__unit:nth-child(1) .bpVideo__caption {
   background-color: #008522;
 }
-#brandPage .bpVideo--unit:nth-child(2) .bpVideo--caption {
+#brandPage .bpVideo__unit:nth-child(2) .bpVideo__caption {
   background-color: #0B50A2;
 }
-#brandPage .bpVideo--caption {
+#brandPage .bpVideo__caption {
   color: #ffffff;
   flex-basis: 35%;
   display: flex;
@@ -402,20 +419,20 @@
   border-radius: 4px;
   padding: 48px;
 }
-#brandPage .bpVideo--caption h3.bpVideo--title {
+#brandPage .bpVideo__caption h3.bpVideo__title {
   color: #ffffff;
 }
-#brandPage .bpVideo--caption span {
+#brandPage .bpVideo__caption span {
   display: block;
 }
-#brandPage .bpVideo--container {
+#brandPage .bpVideo__container {
   flex-basis: 65%;
 }
-#brandPage .bpVideo--container div {
+#brandPage .bpVideo__container div {
   position: relative;
   padding-bottom: 56.25%;
 }
-#brandPage .bpVideo--container div iframe {
+#brandPage .bpVideo__container div iframe {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -429,53 +446,53 @@
 #brandPage .bpFaq h3 {
   color: #008522;
 }
-#brandPage .bpFaq--units {
+#brandPage .bpFaq__units {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-#brandPage .bpFaq--box {
+#brandPage .bpFaq__box {
   background-color: #008522;
   border-radius: 4px;
   padding: 16px;
   cursor: pointer;
   transition: background-color 500ms;
 }
-#brandPage .bpFaq--box:hover {
+#brandPage .bpFaq__box:hover {
   background-color: #00661a;
 }
-#brandPage .bpFaq--box--handle {
+#brandPage .bpFaq__box__handle {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   gap: 16px;
 }
-#brandPage .bpFaq--box--handle h4 {
+#brandPage .bpFaq__box__handle h4 {
   text-align: left;
   color: #ffffff;
   font-weight: 400;
 }
-#brandPage .bpFaq--box--content {
+#brandPage .bpFaq__box__content {
   max-height: 0;
   overflow: hidden;
   will-change: max-height;
   transition: opacity 500ms, max-height 500ms, padding 500ms;
   opacity: 0;
 }
-#brandPage .bpFaq--box--content p {
+#brandPage .bpFaq__box__content p {
   margin-top: 0;
   text-align: left;
   color: #ffffff;
 }
-#brandPage .bpFaq--box__active .bpFaq--box--content {
+#brandPage .bpFaq__box--active .bpFaq__box__content {
   padding: 16px 0 24px 0;
   opacity: 1;
 }
-#brandPage .bpFaq--box__active .bpFaq--box--icon {
+#brandPage .bpFaq__box--active .bpFaq__box__icon {
   transform: rotate(45deg);
 }
-#brandPage .bpFaq--box--icon {
+#brandPage .bpFaq__box__icon {
   width: 20px;
   min-width: 20px;
   height: 20px;
@@ -487,13 +504,13 @@
   flex-direction: column;
   gap: 48px;
 }
-#brandPage .bpFooter--icons {
+#brandPage .bpFooter__icons {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 48px;
 }
-#brandPage .bpFooter--unit {
+#brandPage .bpFooter__unit {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
@@ -509,7 +526,7 @@
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   width: 160px;
-  padding: 8px 0;
+  padding: 12px 0;
   text-align: center;
   text-decoration: none;
   font-size: 14px;
@@ -521,7 +538,6 @@
 }
 @media only screen and (max-width: 400px) {
   #brandPage .bpButton {
-    padding: 4px 0;
     font-size: 12px;
   }
 }
@@ -533,41 +549,32 @@
   box-shadow: none;
 }
 
-.layout-0 #brandPage-container,
-.bp-container {
+.layout-0 #brandPage .bp-container {
   gap: 48px;
 }
-.layout-0 #brandPageBanner img,
-.bpBanner img {
+.layout-0 #brandPage .bpBanner img {
   max-width: 50%;
 }
-.layout-0 #brandPagePerex p,
-.bpPerex p {
+.layout-0 #brandPage .bpPerex p {
   margin-top: 24px;
 }
-.layout-0 #brandPagePerex p span,
-.bpPerex p span {
+.layout-0 #brandPage .bpPerex p span {
   display: block;
 }
-.layout-0 #brandPageCards--caption,
-.bpCards--caption {
+.layout-0 #brandPage .bpCards__caption {
   gap: 24px;
 }
-.layout-0 #brandPageCards p,
-.bpCards p {
+.layout-0 #brandPage .bpCards p {
   padding: 0 32px;
 }
-.layout-0 #brandPageIcons,
-.bpIcons {
+.layout-0 #brandPage .bpIcons {
   padding-left: 0;
 }
-.layout-0 #brandPageIcons img,
-.bpIcons img {
+.layout-0 #brandPage .bpIcons img {
   margin: 0;
   max-width: 39.25%;
 }
-.layout-0 #brandPageVideo iframe,
-.bpVideo iframe {
+.layout-0 #brandPage .bpVideo iframe {
   height: 256px;
 }
 
@@ -584,8 +591,8 @@
   .mobileapp #brandPage .bpPerex p {
     margin-top: 24px;
   }
-  .mobile #brandPage .bpCards--caption,
-  .mobileapp #brandPage .bpCards--caption {
+  .mobile #brandPage .bpCards__caption,
+  .mobileapp #brandPage .bpCards__caption {
     gap: 24px;
   }
   .mobile #brandPage .bpCards p,
@@ -601,8 +608,8 @@
     margin: 0;
     max-width: 39.25%;
   }
-  .mobile #brandPage .bpVideo--caption,
-  .mobileapp #brandPage .bpVideo--caption {
+  .mobile #brandPage .bpVideo__caption,
+  .mobileapp #brandPage .bpVideo__caption {
     padding: 16px;
   }
   .mobile #brandPage .bpVideo h3,
@@ -613,27 +620,27 @@
   }
 }
 @media only screen and (max-width: 630px) {
-  .mobile #brandPage .bpCards--unit,
-  .mobileapp #brandPage .bpCards--unit {
+  .mobile #brandPage .bpCards__unit,
+  .mobileapp #brandPage .bpCards__unit {
     flex-direction: column;
   }
-  .mobile #brandPage .bpCards--unit:nth-of-type(2) img,
-  .mobileapp #brandPage .bpCards--unit:nth-of-type(2) img {
+  .mobile #brandPage .bpCards__unit:nth-of-type(2) img,
+  .mobileapp #brandPage .bpCards__unit:nth-of-type(2) img {
     order: 1;
   }
-  .mobile #brandPage .bpCards--caption,
-  .mobileapp #brandPage .bpCards--caption {
+  .mobile #brandPage .bpCards__caption,
+  .mobileapp #brandPage .bpCards__caption {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 100%;
   }
-  .mobile #brandPage .bpCards--caption h3,
-  .mobileapp #brandPage .bpCards--caption h3 {
+  .mobile #brandPage .bpCards__caption h3,
+  .mobileapp #brandPage .bpCards__caption h3 {
     margin-top: 100%;
   }
-  .mobile #brandPage .bpCards--image,
-  .mobileapp #brandPage .bpCards--image {
+  .mobile #brandPage .bpCards__image,
+  .mobileapp #brandPage .bpCards__image {
     width: 100%;
   }
   .mobile #brandPage .bpIcons,
@@ -648,26 +655,26 @@
   .mobileapp #brandPage .bpVideo {
     gap: 16px;
   }
-  .mobile #brandPage .bpVideo--unit,
-  .mobileapp #brandPage .bpVideo--unit {
+  .mobile #brandPage .bpVideo__unit,
+  .mobileapp #brandPage .bpVideo__unit {
     gap: 16px;
     flex-direction: column;
   }
-  .mobile #brandPage .bpVideo--unit:nth-child(2) .bpVideo--caption,
-  .mobileapp #brandPage .bpVideo--unit:nth-child(2) .bpVideo--caption {
+  .mobile #brandPage .bpVideo__unit:nth-child(2) .bpVideo__caption,
+  .mobileapp #brandPage .bpVideo__unit:nth-child(2) .bpVideo__caption {
     order: -1;
   }
   .mobile #brandPage .bpFooter,
   .mobileapp #brandPage .bpFooter {
     gap: 32px;
   }
-  .mobile #brandPage .bpFooter--icons,
-  .mobileapp #brandPage .bpFooter--icons {
+  .mobile #brandPage .bpFooter__icons,
+  .mobileapp #brandPage .bpFooter__icons {
     flex-direction: column;
     gap: 32px;
   }
-  .mobile #brandPage .bpFooter--unit,
-  .mobileapp #brandPage .bpFooter--unit {
+  .mobile #brandPage .bpFooter__unit,
+  .mobileapp #brandPage .bpFooter__unit {
     gap: 16px;
   }
 }
@@ -676,8 +683,8 @@
   .mobileapp #brandPage .bpBanner {
     padding-top: unset;
   }
-  .mobile #brandPage .bpBanner--container,
-  .mobileapp #brandPage .bpBanner--container {
+  .mobile #brandPage .bpBanner__container,
+  .mobileapp #brandPage .bpBanner__container {
     flex-direction: column;
   }
   .mobile #brandPage .bpBanner img,
@@ -688,8 +695,8 @@
   .mobileapp #brandPage .bpBanner img:first-of-type {
     order: 1;
   }
-  .mobile #brandPage .bpBanner--logo,
-  .mobileapp #brandPage .bpBanner--logo {
+  .mobile #brandPage .bpBanner__logo,
+  .mobileapp #brandPage .bpBanner__logo {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 30%;
@@ -697,23 +704,23 @@
   }
 }
 @media only screen and (max-width: 400px) {
-  .mobile #brandPage .bpIcons--icons,
-  .mobileapp #brandPage .bpIcons--icons {
+  .mobile #brandPage .bpIcons__icons,
+  .mobileapp #brandPage .bpIcons__icons {
     margin-left: 0;
     margin-top: 32px;
   }
-  .mobile #brandPage .bpIcons--unit,
-  .mobileapp #brandPage .bpIcons--unit {
+  .mobile #brandPage .bpIcons__unit,
+  .mobileapp #brandPage .bpIcons__unit {
     flex-direction: column;
     gap: 16px;
   }
-  .mobile #brandPage .bpIcons--unit--caption,
-  .mobileapp #brandPage .bpIcons--unit--caption {
+  .mobile #brandPage .bpIcons__unit__caption,
+  .mobileapp #brandPage .bpIcons__unit__caption {
     text-align: center;
   }
-  .mobile #brandPage .bpIcons--unit--caption p, .mobile #brandPage .bpIcons--unit--caption h4,
-  .mobileapp #brandPage .bpIcons--unit--caption p,
-  .mobileapp #brandPage .bpIcons--unit--caption h4 {
+  .mobile #brandPage .bpIcons__unit__caption p, .mobile #brandPage .bpIcons__unit__caption h4,
+  .mobileapp #brandPage .bpIcons__unit__caption p,
+  .mobileapp #brandPage .bpIcons__unit__caption h4 {
     text-align: center;
   }
 }

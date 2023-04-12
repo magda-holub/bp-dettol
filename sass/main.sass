@@ -21,10 +21,10 @@
             position: relative
             padding-top: 72px
 
-            &--container
+            &__container
                 @include flexOr
 
-            &--logo
+            &__logo
                 position: absolute
                 top: 0
                 left: 50%
@@ -41,18 +41,18 @@
             @include flexVert
             gap: 32px
 
-            &--unit
+            &__unit
                 @include flexOr
                 justify-content: space-between
                 gap: 32px
 
-                &:nth-child(1) .bpCards--caption
+                &:nth-child(1) .bpCards__caption
                     background-color: $green
 
-                &:nth-child(2) .bpCards--caption
+                &:nth-child(2) .bpCards__caption
                     background-color: $usafa
                     
-            &--caption
+            &__caption
                 color:  $white
                 width: calc((100% - 32px) / 2)
                 @include flexVert
@@ -68,7 +68,7 @@
                 h3
                     color: $white
 
-            &--image
+            &__image
                 width: calc((100% - 32px) / 2)
                 border-radius: 4px
 
@@ -78,44 +78,44 @@
             align-items: center
             gap: 48px
 
-            &--icon
+            &__icon
                 width: 64px
                 height: 64px
                 flex-shrink: 0
 
-            &--icons
+            &__icons
                 @include flexVert
                 gap: 32px
 
-            &--unit
+            &__unit
                 @include flexOr
                 align-items: center
                 gap: 48px
 
-                &--caption
+                &__caption
                     text-align: left
 
                     h4
                         color: $green
 
-            &--image
+            &__image
                 margin: 16px
 
         &Video
             @include flexVert
             gap: 32px
 
-            &--unit
+            &__unit
                 @include flexOr
                 gap: 32px
 
-                &:nth-child(1) .bpVideo--caption
+                &:nth-child(1) .bpVideo__caption
                     background-color: $green
 
-                &:nth-child(2) .bpVideo--caption
+                &:nth-child(2) .bpVideo__caption
                     background-color: $usafa
 
-            &--caption
+            &__caption
                 color:  $white
                 flex-basis: 35%
                 @include flexVert
@@ -124,13 +124,13 @@
                 border-radius: 4px
                 padding: 48px
 
-                h3.bpVideo--title
+                h3.bpVideo__title
                     color: $white
                 
                 span
                     display: block
 
-            &--container
+            &__container
                 flex-basis: 65%
 
                 div
@@ -152,11 +152,11 @@
             h3
                 color: $green
 
-            &--units
+            &__units
                 @include flexVert
                 gap: 16px
 
-            &--box 
+            &__box 
                 background-color: $green
                 border-radius: 4px
                 padding: 16px
@@ -166,7 +166,7 @@
                 &:hover
                     background-color: darken($green, 6%)
 
-                &--handle 
+                &__handle 
                     @include flexOr
                     justify-content: space-between
                     gap: 16px
@@ -176,7 +176,7 @@
                         color: $white
                         font-weight: 400              
 
-                &--content 
+                &__content 
                     max-height: 0
                     overflow: hidden
                     will-change: max-height
@@ -189,15 +189,15 @@
                         color: $white
 
                 
-                &__active 
-                    .bpFaq--box--content 
+                &--active 
+                    .bpFaq__box__content 
                         padding: 16px 0 24px 0
                         opacity: 1
 
-                    .bpFaq--box--icon
+                    .bpFaq__box__icon
                         transform: rotate(45deg)
 
-                &--icon
+                &__icon
                     width: 20px
                     min-width: 20px
                     height: 20px
@@ -208,11 +208,11 @@
             @include flexVert
             gap: 48px
 
-            &--icons
+            &__icons
                 @include flexOr
                 gap: 48px
 
-            &--unit
+            &__unit
                 flex: 1 1 0
                 @include flexVert
                 align-items: center
@@ -228,7 +228,7 @@
             @include btnStates($white)
 
 // layout 0
-.layout-0 #brandPage,
+.layout-0 #brandPage
     .bp
         &-container
             gap: 48px
@@ -244,7 +244,7 @@
                 display: block
 
         &Cards
-            &--caption
+            &__caption
                 gap: 24px
             p
                 padding: 0 32px
@@ -274,7 +274,7 @@
                 margin-top: 24px
 
             &Cards
-                &--caption
+                &__caption
                     gap: 24px
 
                 p
@@ -288,7 +288,7 @@
                     max-width: 39.25%
 
             &Video
-                &--caption
+                &__caption
                     padding: 16px
 
                 h3
@@ -299,13 +299,13 @@
     .mobileapp #brandPage
         .bp
             &Cards
-                &--unit
+                &__unit
                     flex-direction: column
 
                     &:nth-of-type(2) img
                         order: 1   
 
-                &--caption
+                &__caption
                     position: relative
                     width: 100%
                     height: 0
@@ -314,7 +314,7 @@
                     h3
                         margin-top: 100%
 
-                &--image
+                &__image
                     width: 100%
 
             &Icons
@@ -326,21 +326,21 @@
             &Video
                 gap: 16px
 
-                &--unit
+                &__unit
                     gap: 16px
                     flex-direction: column
 
-                    &:nth-child(2) .bpVideo--caption
+                    &:nth-child(2) .bpVideo__caption
                         order: -1
 
             &Footer
                 gap: 32px
 
-                &--icons
+                &__icons
                     flex-direction: column
                     gap: 32px
 
-                &--unit
+                &__unit
                     gap: 16px
 
 @media only screen and (max-width: 550px)
@@ -350,7 +350,7 @@
             &Banner
                 padding-top: unset
 
-                &--container
+                &__container
                     flex-direction: column
 
                 img
@@ -359,7 +359,7 @@
                     &:first-of-type
                         order: 1
 
-                &--logo
+                &__logo
                     top: 50%
                     transform: translate(-50%, -50%)
                     width: 30%
@@ -370,15 +370,15 @@
     .mobileapp #brandPage
         .bp
             &Icons
-                &--icons
+                &__icons
                     margin-left: 0
                     margin-top: 32px
 
-                &--unit
+                &__unit
                     flex-direction: column
                     gap: 16px
 
-                    &--caption
+                    &__caption
                         text-align: center
 
                         p, h4
